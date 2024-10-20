@@ -72,18 +72,17 @@ function handleRegister(event) {
     })
         .then(response => response.json())
         .then(data => {
+            console.log(data);  // Add this to check the API response
             const loginAlert = document.getElementById("loginAlert");
-            if (data.success) {
-                alert("Registration successful!");
-                // Set success message
+            if (data.isSuccess) {  // Change this line based on the actual response structure
+                //alert("Registration successful!");
                 loginAlert.className = "alert alert-success";
-                loginAlert.innerHTML = "Login successful!";
+                loginAlert.innerHTML = "Registration successful!";
                 loginAlert.style.display = "block";
             } else {
-                alert("Login failed. Please check your credentials.");
-                // Set failure message
+                //alert("Registration failed. Please check your details.");
                 loginAlert.className = "alert alert-danger";
-                loginAlert.innerHTML = "Login failed. Please check your credentials.";
+                loginAlert.innerHTML = "Registration failed. Please check your details.";
                 loginAlert.style.display = "block";
             }
         })
