@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS (requires Popper.js for modals) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="../styles.css">
+    
+    <script src="login.js"></script>
+
+    <title>Login/Register</title>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h2 id="formTitle">Login</h2>
+
+        <!-- Bootstrap Toggle Switch between Login and Register -->
+        <div class="form-check form-switch text-center mb-4">
+            <input class="form-check-input" type="checkbox" id="formToggle" onclick="toggleForms()">
+            <label class="form-check-label" for="formToggle" id="toggleLabel">Switch to Register</label>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm" style="display:block;">
+            <!-- Username input with MDB classes -->
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="loginUsername" class="form-control" required />
+                <label class="form-label" for="loginUsername">Username</label>
+            </div>
+
+            <!-- Password input with MDB classes -->
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="password" id="loginPassword" class="form-control" required />
+                <label class="form-label" for="loginPassword">Password</label>
+            </div>
+
+            <!-- Submit button with MDB classes -->
+            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4 w-100"
+                onclick="handleLogin(event)">Login</button>
+        </form>
+
+        <!-- Register Form (Initially Hidden) -->
+        <form id="registerForm" style="display:none;">
+            <!-- Username input with MDB classes -->
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="text" id="registerUsername" class="form-control" required />
+                <label class="form-label" for="registerUsername">Username</label>
+            </div>
+
+            <!-- Password input with MDB classes -->
+            <div data-mdb-input-init class="form-outline mb-4">
+                <input type="password" id="registerPassword" class="form-control" required />
+                <label class="form-label" for="registerPassword">Password</label>
+            </div>
+
+            <!-- Register button with MDB classes -->
+            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4 w-100"
+                onclick="handleRegister(event)">Register</button>
+        </form>
+    </div>
+
+    <!-- Alert for displaying login/register errors -->
+    <div id="loginAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+
+</body>
+
+</html>
