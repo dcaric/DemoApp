@@ -1,9 +1,12 @@
 
+.navbar {
+  background-color: black;
+}
+
 .navbar a {
-  /*background-color: #ddd;*/
   color: white;
 }
+
  .navbar a:hover {
-  /*background-color: #ddd;*/
   color: orange;
 }
