@@ -24,7 +24,7 @@ function handleLogin(event) {
                 // Store the token in sessionStorag (or sessionStorage if preferred)
                 sessionStorage.setItem('jwtToken', data.data.token);
 
-                alert("Login successful!");
+                //alert("Login successful!");
                 // Set success message
                 const loginAlert = document.getElementById("loginAlert");
                 loginAlert.className = "alert alert-success";
@@ -36,11 +36,11 @@ function handleLogin(event) {
                 sessionStorage.setItem('username', data.data.username);
 
             } else {
-                alert("Login failed. Please check your credentials.");
+                //alert("Login failed. Please check your credentials.");
                 // Set failure message
                 const loginAlert = document.getElementById("loginAlert");
                 loginAlert.className = "alert alert-danger";
-                loginAlert.innerHTML = "Login failed. Please check your credentials.";
+                loginAlert.innerHTML = data.errorMessages[0];
                 loginAlert.style.display = "block";
             }
         })
@@ -82,7 +82,7 @@ function handleRegister(event) {
             } else {
                 //alert("Registration failed. Please check your details.");
                 loginAlert.className = "alert alert-danger";
-                loginAlert.innerHTML = "Registration failed. Please check your details.";
+                loginAlert.innerHTML = data.errorMessages[0];
                 loginAlert.style.display = "block";
             }
         })
