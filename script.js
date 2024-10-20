@@ -10,7 +10,10 @@ function loadModalContent(type) {
   } else if (type === 'login') {
       modalTitle.textContent = 'Login/Register';
       modalBody.innerHTML = '<iframe src="PAGES/login.html" width="100%" height="500px" style="border:none;"></iframe>';
-  }
+  } else {
+    modalTitle.textContent = 'Under Construction';
+    modalBody.innerHTML = '<iframe src="PAGES/underConstruction.html" width="100%" height="500px" style="border:none;"></iframe>';
+}
 
   // Open the modal
   const modal = new bootstrap.Modal(document.getElementById('unifiedModal'));
