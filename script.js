@@ -19,4 +19,3 @@ function loadModalContent(type) {
   const modal = new bootstrap.Modal(document.getElementById('unifiedModal'));
   modal.show();
 }
-

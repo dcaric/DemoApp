@@ -1,3 +1,11 @@
+
+/* Importing fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
 .navbar {
   background-color: black;
 }
@@ -50,5 +58,73 @@
 .overlay h1 {
   color: white;
   font-size: 3rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  text-shadow: 2px 2px 5px rgba(226, 174, 4, 0.7);
 }
+
+
+
+
+
+/********************************************************************************/
+/* Typing Effect */
+.typing {
+  color: #4FC3F7;
+  font-size: 2em;
+  margin-top: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid #ffffff;
+  width: 0; /* Start with zero width */
+  animation: typing 4s steps(45, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+.typing .text-uppercase {
+  text-transform: uppercase;
+}
+
+/*
+@keyframes typing: This defines an animation sequence named typing.
+	•	from { width: 0; }: The animation starts with the element’s width at 0, effectively hiding the text.
+	•	to { width: 20ch; }: The animation ends with the element’s width at 20ch (20 characters wide).
+  The ch unit represents the width of the character 0 in the current font, so 20ch is approximately the width of 20 characters.
+
+Purpose:
+	•	Simulating Typing: By gradually increasing the width from 0 to 20ch, the text within the element is progressively revealed, creating the illusion of typing.
+
+GUIDE:
+https://www.w3schools.com/cssref/tryit.php?filename=trycss3_keyframes4
+
+
+*/
+/* Typing Animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 20ch; } /* Adjust to the length of your text */
+}
+
+/* Blinking Cursor */
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: #ffffff; }
+}
+
+/* Responsive Text */
+@media screen and (max-width: 768px) {
+  .video-bg h1 {
+      font-size: 2.5em;
+  }
+  .typing {
+      font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .video-bg h1 {
+      font-size: 2em;
+  }
+  .typing {
+      font-size: 1.2em;
+  }
+}
+
+/********************************************************************************/
