@@ -1,5 +1,6 @@
-.navbar {
-  background-color: black;
+
+.my-dark {
+  background-color: black !important;
 }
 
 .navbar a {
@@ -51,4 +52,21 @@
   color: white;
   font-size: 3rem;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+.img-fluid {
+  max-width: 140px !important;
+  height: auto;
+}
+
+/* mobile styles */
+@media (max-width: 768px) {
+  .overlay h1 {
+    font-size: 2rem;
+  }
+
+  .img-fluid {
+    max-width: 100px !important;
+  }
 }

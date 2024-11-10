@@ -15,7 +15,22 @@ function handleLogin(event) {
             password: password
         })
     })
+        /**
+         response: This is a parameter passed to the first .then() callback function.
+         It refers to the Response object returned by the fetch() API. The Response object
+         has methods like .json(), .text(), etc., which are used to extract the body content
+         of the response. In this code, response.json() is called, which returns another 
+         Promise that resolves to the parsed JSON data from the response body.
+         */
         .then(response => response.json())
+        /**
+         data: This is the parameter passed to the second .then() callback function.
+         It holds the parsed JSON data returned by response.json().
+         This data object contains the actual content sent back by the server (e.g., 
+         a login response), and it is not predefined by JavaScript.
+         The structure of data depends on what the server at 
+         https://www.fulek.com/data/api/user/login returns.
+         */
         .then(data => {
             if (data.isSuccess && data.statusCode === 200) {
 
@@ -34,6 +49,13 @@ function handleLogin(event) {
                 // You can also store other information like username if needed
                 //localStorage.setItem('username', data.data.username);
                 sessionStorage.setItem('username', data.data.username);
+                /**
+                sessionStorage.setItem(): Stores data in the session storage of the browser,
+                which lasts until the browser tab is closed.
+                
+                localStorage.setItem(): Stores data persistently in the browser’s
+                local storage, even after the browser is closed.
+                 */
 
             } else {
                 //alert("Login failed. Please check your credentials.");

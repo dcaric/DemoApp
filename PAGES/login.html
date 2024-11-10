@@ -20,25 +20,30 @@
 </head>
 
 <body>
-    <div class="container mt-5">
+    <div class="container">
         <h2 id="formTitle">Login</h2>
 
         <!-- Bootstrap Toggle Switch between Login and Register -->
-        <div class="form-check form-switch text-center mb-4">
+        <div class="form-check form-switch text-center">
             <input class="form-check-input" type="checkbox" id="formToggle" onclick="toggleForms()">
             <label class="form-check-label" for="formToggle" id="toggleLabel">Switch to Register</label>
         </div>
 
         <!-- Login Form -->
+        <!--
+        This form does not have action and method attributes because we are not sending data to the server
+        directly from the form. Instead, we are using JavaScript to handle the login and register requests.
+        So form is connected via button click event to the JavaScript function.
+         -->
         <form id="loginForm" style="display:block;">
             <!-- Username input with MDB classes -->
-            <div data-mdb-input-init class="form-outline mb-4">
+            <div data-mdb-input-init class="form-outline">
                 <input type="text" id="loginUsername" class="form-control" required />
                 <label class="form-label" for="loginUsername">Username</label>
             </div>
 
             <!-- Password input with MDB classes -->
-            <div data-mdb-input-init class="form-outline mb-4">
+            <div data-mdb-input-init class="form-outline">
                 <input type="password" id="loginPassword" class="form-control" required />
                 <label class="form-label" for="loginPassword">Password</label>
             </div>
@@ -51,19 +56,19 @@
         <!-- Register Form (Initially Hidden) -->
         <form id="registerForm" style="display:none;">
             <!-- Username input with MDB classes -->
-            <div data-mdb-input-init class="form-outline mb-4">
+            <div data-mdb-input-init class="form-outline">
                 <input type="text" id="registerUsername" class="form-control" required />
                 <label class="form-label" for="registerUsername">Username</label>
             </div>
 
             <!-- Password input with MDB classes -->
-            <div data-mdb-input-init class="form-outline mb-4">
+            <div data-mdb-input-init class="form-outline">
                 <input type="password" id="registerPassword" class="form-control" required />
                 <label class="form-label" for="registerPassword">Password</label>
             </div>
 
             <!-- Register button with MDB classes -->
-            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4 w-100"
+            <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block w-100"
                 onclick="handleRegister(event)">Register</button>
         </form>
     </div>
