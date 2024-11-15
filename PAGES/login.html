@@ -14,7 +14,7 @@
     <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="../styles.css">
 
-    <script src="login.js"></script>
+    <script src="../script.js"></script>
 
     <title>Login/Register</title>
 </head>
@@ -28,6 +28,9 @@
             <input class="form-check-input" type="checkbox" id="formToggle" onclick="toggleForms()">
             <label class="form-check-label" for="formToggle" id="toggleLabel">Switch to Register</label>
         </div>
+
+
+
 
         <!-- Login Form -->
         <!--
@@ -53,6 +56,9 @@
                 onclick="handleLogin(event)">Login</button>
         </form>
 
+
+
+
         <!-- Register Form (Initially Hidden) -->
         <form id="registerForm" style="display:none;">
             <!-- Username input with MDB classes -->
@@ -73,6 +79,9 @@
         </form>
     </div>
 
+
+
+    
     <!-- Alert for displaying login/register errors -->
     <div id="loginAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
 

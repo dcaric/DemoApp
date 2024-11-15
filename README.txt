@@ -6,6 +6,16 @@
 1) Bootstrap
 https://getbootstrap.com/
 
+    Links to Common Events
+	•	Modals: https://getbootstrap.com/docs/5.3/components/modal/#events
+	•	Tooltips: https://getbootstrap.com/docs/5.3/components/tooltips/#events
+	•	Dropdowns: https://getbootstrap.com/docs/5.3/components/dropdowns/#events
+	•	Carousels: https://getbootstrap.com/docs/5.3/components/carousel/#events
+	•	Collapse: https://getbootstrap.com/docs/5.3/components/collapse/#events
+
+
+
+
 2) Postman
 https://www.postman.com/
 
